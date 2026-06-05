@@ -2,7 +2,7 @@
 
 Sito portfolio personale realizzato in HTML, CSS e JavaScript vanilla.
 
-🔗 **Live:** [marlisamazzola.github.io](https://marlisamazzola.github.io/index.html)
+🔗 **Live:** [marlisamazzola.github.io](https://marlisamazzola.github.io/portfolio)
 
 ---
 
