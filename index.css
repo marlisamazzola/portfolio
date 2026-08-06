@@ -4,11 +4,15 @@ html {
 
 :root {
     --primary-color: #2cb59e;
-    --secondary-color: #B5522B;
-    --primary-color-hover: #1e8c7a;
-    --secondary-color-hover: #8c3d1f;
+    --secondary-color: #ee8456;
+    --primary-color-hover: #1f7a67;
+    --secondary-color-hover: #e76f51;
     --background-box: #e9eeee;
     --text-color: #283633;
+
+    --font-title: "Stack Sans Notch", sans-serif;
+    --font-primary: montserrat, sans-serif;
+    --font-secondary: "Roboto Mono", monospace;
 }
 
 *,
@@ -19,10 +23,15 @@ html {
     padding: 0;
 }
 
-h2, h3, p, a, li {
-    font-family: "Open Sans", sans-serif;
+h2, h3, p, li {
+    font-family: var(--font-primary);
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+.hero h2, a, button {
+    font-family: var(--font-secondary);
+    font-optical-sizing: auto;
 }
 
 h1, span {
@@ -31,14 +40,16 @@ h1, span {
 }
 
 /* Nav */
+
 nav {
     display: flex;
     flex-direction: row;
-    gap: 100px;
-    padding: 40px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 100px;
+    padding: 20px;
+    height: 80px;
+    box-sizing: border-box; 
 }
 
 nav a {
@@ -84,18 +95,18 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 150px;
     background-color: var(--background-box);
-    gap: 8px;
-    padding-bottom: 40px;
-    padding-left: 60px;
-    padding-right: 100px;
     z-index: 1;
+    padding: 20px;
 }
 
 .hero-text {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 30px;
+    width: 600px;
 }
 
 .title-gray {
@@ -110,30 +121,26 @@ nav a:hover {
     font-size: 8rem;
     font-style: normal;
     line-height: 0.9;
-    margin-left: 150px;
     color: var(--primary-color);
-    margin-top: 0;
 }
 
 .subtitle {
     font-size: 2.5rem;
     font-weight: 600;
     color: var(--text-color);
-    margin-left: 150px;
-    margin-bottom: 25px;
 }
 
 .description {
     font-size: 1.1rem;
     color: var(--text-color);
-    margin-left: 150px;
-    max-width: 56%;
     line-height: 1.5;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .gradient {
     background: linear-gradient(to bottom, var(--primary-color) 50%, var(--secondary-color) 50%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline;
@@ -141,6 +148,7 @@ nav a:hover {
 
 .gradient-i {
     background: linear-gradient(to top, var(--primary-color) 69%, var(--secondary-color) 31%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline;
@@ -151,7 +159,6 @@ nav a:hover {
     width: 370px;
     height: 370px;
     flex-shrink: 0;
-    margin-right: 150px;
 }
 
 #profile-pic {
@@ -348,11 +355,20 @@ nav a:hover {
     font-family: "Open Sans", sans-serif;
 }
 
+.project-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .screenshot {
     width: 100%;
     height: auto;
     border-radius: 5px;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .screenshot:hover {
@@ -360,7 +376,25 @@ nav a:hover {
     transition: transform 0.3s ease;
 }
 
-.project-card a {
+.repo-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color-hover);
+    color: var(--primary-color-hover);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+.repo-link:hover {
+    background-color: var(--primary-color-hover);
+    color: white;
+}
+
+.site-link {
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--primary-color);
@@ -372,7 +406,7 @@ nav a:hover {
     box-sizing: border-box;
 }
 
-.project-card a:hover {
+.site-link:hover {
     background-color: var(--primary-color-hover);
 }
 
@@ -475,11 +509,8 @@ nav a:hover {
     .project-card {
         width: 300px;
     }
-}
 
-.project-card p {
-        min-height: 5.4rem;
-    }
+}
 
 @media (max-width: 480px) {
     nav {
