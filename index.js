@@ -10,13 +10,25 @@ function getCardWidth() {
     return firstCard.offsetWidth + gap;
 }
 
-btnRight.addEventListener('click', () => {
-    container.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
-});
+function updateCarouselButtons() {
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    btnLeft.disabled = container.scrollLeft <= 0;
+    btnRight.disabled = container.scrollLeft >= maxScroll - 1;
+}
 
-btnLeft.addEventListener('click', () => {
-    container.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
-});
+if (container && btnLeft && btnRight) {
+    btnRight.addEventListener('click', () => {
+        container.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+    });
+
+    btnLeft.addEventListener('click', () => {
+        container.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+    });
+
+    container.addEventListener('scroll', updateCarouselButtons);
+    window.addEventListener('resize', updateCarouselButtons);
+    updateCarouselButtons();
+}
 
 const yearEl = document.querySelector('.footer-year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();

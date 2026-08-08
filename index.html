@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="Portfolio di Marlisa Mazzola, Frontend Developer. Progetti in HTML, CSS, JavaScript e React." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="theme-color" content="#2cb59e" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Stack+Sans+Notch:wght@200..700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;600&family=Stack+Sans+Notch:wght@700&display=swap"
         rel="stylesheet">
     <title>Marlisa Mazzola - Portfolio</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -31,75 +33,64 @@
     <main>
         <section class="hero">
             <div class="hero-text">
+                <span class="availability-badge">
+                    <span class="availability-dot"></span>
+                    Disponibile per nuovi progetti
+                </span>
                 <h1 class="main-title">
                     <span class="title-gray">Ciao, sono<br></span>
                     M<span class="gradient">a</span>rl<span class="gradient-i">i</span>s<span class="gradient">a</span>
                 </h1>
                 <h2 class="subtitle">&lt;Frontend Developer /&gt;</h2>
-                <p class="description">
-                    Dopo un percorso nella ricerca scientifica, ho trasferito il mio approccio
-                    analitico e la cura del dettaglio nello sviluppo Front-End.
-                    Unisco codice pulito, UI/UX design e accessibilità per
-                    creare <strong>interfacce funzionali, intuitive ed esteticamente curate</strong>. Il mio obiettivo è progettare
-                    esperienze digitali ad alte prestazioni che siano semplici e piacevoli da usare per chiunque.
-                </p>
+                <div class="description">
+                    <p class="description-block">
+                        Dopo un percorso nella ricerca scientifica, ho trasferito il mio approccio
+                        analitico e la cura del dettaglio nello sviluppo Front-End.
+                        <br><br>
+                        Unisco codice pulito, UI/UX design e accessibilità per
+                        creare <strong>interfacce funzionali, intuitive ed esteticamente curate</strong>. Il mio
+                        obiettivo è progettare
+                        esperienze digitali ad alte prestazioni che siano semplici e piacevoli da usare per chiunque.
+                    </p>
+                </div>
             </div>
             <div class="hero-image">
                 <div class="circle-orange-large"></div>
                 <div class="circle-orange-small"></div>
                 <div class="circle-teal-small"></div>
                 <div class="circle-teal-big"></div>
-                <img id="profile-pic" src="immagini/profile-pic.jpg" alt="Foto profilo">
+                <img id="profile-pic" src="images/profile-pic.jpg" alt="Foto profilo">
             </div>
         </section>
 
         <section class="technologies" id="technologies">
-            <h2 class="title">Competenze</h2>
             <ul class="technologies-list">
                 <li>
                     <div class="tech-card">
                         HTML5
-                        <img src="loghi/html-50.png" alt="html5 logo">
+                        <img src="icons/html.png" alt="html5 logo">
                     </div>
                 </li>
                 <li>
                     <div class="tech-card">
                         CSS3
-                        <img src="loghi/css-50.png" alt="css3 logo">
+                        <img src="icons/css.png" alt="css3 logo">
                     </div>
                 </li>
                 <li>
                     <div class="tech-card">
                         JavaScript
-                        <img src="loghi/javascript-50.png" alt="javascript logo">
+                        <img src="icons/js.png" alt="javascript logo">
                     </div>
                 </li>
                 <li>
                     <div class="tech-card">
                         React
-                        <img src="loghi/react-50.png" alt="react logo">
-                    </div>
-                </li>
-                <li>
-                    <div class="tech-card">
-                        TailwindCSS
-                        <img src="loghi/tailwind-50.png" alt="tailwind logo">
-                    </div>
-                </li>
-                <li>
-                    <div class="tech-card">
-                        Git
-                        <img src="loghi/git-50.png" alt="git logo">
-                    </div>
-                </li>
-                <li>
-                    <div class="tech-card">
-                        Wordpress
-                        <img src="loghi/wordpress-50.png" alt="wordpress logo">
+                        <img src="icons/react.png" alt="react logo">
                     </div>
                 </li>
             </ul>
-            <button class="btn" onclick="window.open('file/marlisa-mazzola-cv.pdf', '_blank')">Scarica CV</button>
+            <a class="btn" href="files/marlisa-mazzola-cv.pdf" download>Scarica CV</a>
         </section>
 
         <section class="projects" id="projects">
@@ -110,76 +101,52 @@
                     <div class="carousel-container">
 
                         <div class="project-card">
-                            <h3>fiori&giardini</h3>
-<<<<<<< HEAD
-                            <p>Sito web statico per un'azienda di giardinaggio, realizzato come esercizio frontend in
-                                HTML5 e CSS3</p>
-=======
-                            <p>Sito web statico per un'azienda di giardinaggio, realizzato come esercizio frontend in HTML5 e CSS3</p>
-                            <img class="screenshot" src="immagini/fiori-giardini.png" alt="screenshot del portfolio">
->>>>>>> 964ac9eeb924443f26b0ce1db36972d0e691131d
+                            <h3>fiori&amp;giardini</h3>
+                            <p>Sito web statico realizzato come esercizio frontend in HTML5 e CSS3</p>
                             <div class="project-technologies">
-                                <span class="project-tech-box">HTML</span>
-                                <span class="project-tech-box">CSS</span>
+                                <span class="project-tech-box tech-html">HTML</span>
+                                <span class="project-tech-box tech-css">CSS</span>
                             </div>
-<<<<<<< HEAD
-                            <img class="screenshot" src="immagini/fiori-giardini.png" alt="screenshot del portfolio">
-                            <a class="site-link" href="https://marlisamazzola.github.io/fiori-giardini/"
-                                target="_blank">Visita il sito</a>
-                            <a class="repo-link" href="https://github.com/marlisamazzola/fiori-giardini"
-                                target="_blank">Vai alla repository</a>
-=======
-                            <div class="project-links">
-                                <a class="repo-link" href="https://github.com/marlisamazzola/fiori-giardini" target="_blank">Repository</a>
-                                <a class="site-link" href="https://marlisamazzola.github.io/fiori-giardini/" target="_blank">Vai al sito</a>
-                            </div>
->>>>>>> 964ac9eeb924443f26b0ce1db36972d0e691131d
+                            <img class="screenshot" src="images/fiori-giardini.png"
+                                alt="Screenshot del sito fiori&amp;giardini" loading="lazy">
+                            <a class="site-link" href="https://marlisamazzola.github.io/fiori-giardini/" target="_blank"
+                                rel="noopener noreferrer">Visita il sito</a>
+                            <a class="repo-link" href="https://github.com/marlisamazzola/fiori-giardini" target="_blank"
+                                rel="noopener noreferrer">Repository</a>
                         </div>
 
                         <div class="project-card">
                             <h3>Quaderni digitali</h3>
-                            <p>App responsive in React per gestire quaderni digitali e note</p>
+                            <p>App responsive in React per la gestione di quaderni digitali e note</p>
                             <div class="project-technologies">
-                                <span class="project-tech-box">HTML</span>
-                                <span class="project-tech-box">CSS</span>
-                                <span class="project-tech-box">React</span>
+                                <span class="project-tech-box tech-html">HTML</span>
+                                <span class="project-tech-box tech-css">CSS</span>
+                                <span class="project-tech-box tech-react">React</span>
                             </div>
-<<<<<<< HEAD
-                            <img class="screenshot" src="immagini/notebook-app.png" alt="screenshot del portfolio">
-                            <a class="site-link" href="https://marlisamazzola.github.io/notebook-app/"
-                                target="_blank">Visita il sito</a>
-                            <a class="repo-link" href="https://github.com/marlisamazzola/notebook-app"
-                                target="_blank">Vai
-                                alla repository</a>
-=======
-                            <div class="project-links">
-                                <a class="repo-link" href="https://github.com/marlisamazzola/notebook-app" target="_blank">Repository</a>
-                                <a class="site-link" href="https://marlisamazzola.github.io/notebook-app/" target="_blank">Vai al sito</a>
-                            </div>
->>>>>>> 964ac9eeb924443f26b0ce1db36972d0e691131d
+                            <img class="screenshot" src="images/notebook-app.png"
+                                alt="Screenshot dell'app Quaderni digitali" loading="lazy">
+                            <a class="site-link" href="https://marlisamazzola.github.io/notebook-app/" target="_blank"
+                                rel="noopener noreferrer">Visita il sito</a>
+                            <a class="repo-link" href="https://github.com/marlisamazzola/notebook-app" target="_blank"
+                                rel="noopener noreferrer">Vai alla repository</a>
                         </div>
 
                         <div class="project-card">
                             <h3>Password game</h3>
-<<<<<<< HEAD
                             <p>Gioco realizzato in Typescript nel quale bisogna indovinare una password di cinque cifre
                             </p>
-=======
-                            <p>Gioco realizzato in Typescript nel quale bisogna indovinare una password di cinque cifre</p>
-                            <img class="screenshot" src="immagini/password-game.png" alt="screenshot del portfolio">
->>>>>>> 964ac9eeb924443f26b0ce1db36972d0e691131d
                             <div class="project-technologies">
-                                <span class="project-tech-box">HTML</span>
-                                <span class="project-tech-box">CSS</span>
-                                <span class="project-tech-box">Typescript</span>
+                                <span class="project-tech-box tech-html">HTML</span>
+                                <span class="project-tech-box tech-css">CSS</span>
+                                <span class="project-tech-box tech-ts">Typescript</span>
                             </div>
-<<<<<<< HEAD
-                            <img class="screenshot" src="immagini/password-game.png" alt="screenshot del portfolio">
-                            <a class="site-link" href="https://marlisamazzola.github.io/password-game/"
-                                target="_blank">Visita il
+                            <img class="screenshot" src="images/password-game.png"
+                                alt="Screenshot del gioco Password game" loading="lazy">
+                            <a class="site-link" href="https://marlisamazzola.github.io/password-game/" target="_blank"
+                                rel="noopener noreferrer">Visita il
                                 sito</a>
-                            <a class="repo-link" href="https://github.com/marlisamazzola/password-game"
-                                target="_blank">Vai alla
+                            <a class="repo-link" href="https://github.com/marlisamazzola/password-game" target="_blank"
+                                rel="noopener noreferrer">Vai alla
                                 repository</a>
                         </div>
 
@@ -188,40 +155,22 @@
                             <h3>Portfolio</h3>
                             <p>Il sito che stai visitando!<br><br></p>
                             <div class="project-technologies">
-=======
-                            <div class="project-links">
-                                <a class="repo-link" href="https://github.com/marlisamazzola/password-game" target="_blank">Repository</a>
-                                <a class="site-link" href="https://marlisamazzola.github.io/password-game/" target="_blank">Vai al sito</a>
+                                <span class="project-tech-box tech-html">HTML</span>
+                                <span class="project-tech-box tech-css">CSS</span>
+                                <span class="project-tech-box tech-js">JavaScript</span>
                             </div>
-                        </div>
-
-                        <div class="project-card">
-                            <h3>Portfolio</h3>
-                            <p>Il sito che stai visitando!</p>
-                            <img class="screenshot" src="immagini/portfolio.png" alt="screenshot del portfolio">
-                            <div class="project-technologies"> 
->>>>>>> 964ac9eeb924443f26b0ce1db36972d0e691131d
-                                <span class="project-tech-box">HTML</span>
-                                <span class="project-tech-box">CSS</span>
-                                <span class="project-tech-box">JavaScript</span>
-                            </div>
-<<<<<<< HEAD
-                            <img class="screenshot" src="immagini/portfolio.png" alt="screenshot del portfolio">
-                            <a class="repo-link" href="https://github.com/marlisamazzola/portfolio" target="_blank">Vai
-                                alla repository</a>
-=======
-                            <div class="project-links">
-                                <a class="repo-link" href="https://github.com/marlisamazzola/portfolio" target="_blank">Repository</a>
-                            </div>
-                        </div>
->>>>>>> 964ac9eeb924443f26b0ce1db36972d0e691131d
+                            <img class="screenshot" src="images/portfolio.png" alt="Screenshot di questo portfolio"
+                                loading="lazy">
+                            <a class="repo-link" href="https://github.com/marlisamazzola/portfolio" target="_blank"
+                                rel="noopener noreferrer">Vai alla repository</a>
 
                         </div>
                     </div>
-                    <button class="carousel-button right" aria-label="Scorri a destra">&#8250;</button>
                 </div>
-                <button class="btn" onclick="window.open('https://github.com/marlisamazzola', '_blank')">Seguimi su
-                    GitHub</button>
+                <button class="carousel-button right" aria-label="Scorri a destra">&#8250;</button>
+            </div>
+            <a class="btn" href="https://github.com/marlisamazzola" target="_blank" rel="noopener noreferrer">Seguimi
+                su GitHub</a>
         </section>
 
     </main>
@@ -232,14 +181,15 @@
             <a href="mailto:marlisamazzola@outlook.it" aria-label="Email">
                 <i class="fa-solid fa-envelope"></i>
             </a>
-            <a href="https://www.linkedin.com/in/marlisa-mazzola/" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/marlisa-mazzola/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="https://github.com/marlisamazzola" target="_blank" aria-label="GitHub">
+            <a href="https://github.com/marlisamazzola" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <i class="fa-brands fa-github"></i>
             </a>
         </div>
-        <p>&copy; <span class="footer-year" style="font-family: 'Open Sans', sans-serif;">2026</span> Marlisa Mazzola
+        <p>&copy; <span class="footer-year">2026</span> Marlisa Mazzola
         </p>
     </footer>
 
