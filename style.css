@@ -652,7 +652,7 @@ button:focus-visible {
 @media (max-width: 480px) {
     nav {
         padding: 20px 16px;
-        gap: 16px;
+        gap: 80px;
         flex-wrap: wrap;
     }
 
